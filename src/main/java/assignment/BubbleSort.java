@@ -17,16 +17,14 @@ public class BubbleSort {
 
   static void sort(int[] arr) {
     int n = arr.length;
+    int i,j,temp;
 
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < n -1 - i; j++) {
-        if (arr[j] > arr[j+1]) {
-            /**
-             * TODO:
-             *  Task: implement the method you learned in the lectures.
-             *  Hint: you may also insert the correct method call from hint.SortingMethods.*
-             *
-             **/
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n -1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+            temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
         }
       }
     }

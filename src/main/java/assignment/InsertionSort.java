@@ -12,25 +12,21 @@ public class InsertionSort {
         int[] arr = {5, 4, 3, 2, 1};
         sort(arr);
         IO.println(Arrays.toString(arr));
-
     }
 
     static void sort(int[] arr) {
         int n = arr.length;
+        int i,j,key;
 
-        for (int i = 1; i < n; i++) {
-            int key = arr[i]; // Pick the element to insert;
-            int j = i -1; // Start comparing with previous elements;
+        for (i = 1; i < n; i++) {
+            key = arr[i]; // Pick the element to insert;
+            j = i -1; // Start comparing with previous elements;
 
-            /**
-             * TODO:
-             *  Task: implement the method you learned in the lectures.
-             *  Hint: you may also insert the correct method call from hint.SortingMethods.*
-             *
-             **/
-
-
+            while (j >= 0 && arr[j] > key) {
+                arr[j+1] = arr[j];
+                j = j - 1;
+            }
+            arr[j+1] = key;
         }
-
     }
 }

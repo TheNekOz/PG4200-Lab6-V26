@@ -52,8 +52,7 @@ public class SortingMethods {
         return leftIndex;
     }
 
-    static  void method3(int[] arr,
-                               int[] leftArr, int[] rightArr) {
+    static void method3(int[] arr, int[] leftArr, int[] rightArr) {
         int i = 0;
         int j = 0;
         for (int k = 0; k < arr.length; k++) {
